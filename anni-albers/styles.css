@@ -35,9 +35,9 @@ p.callout {
 
 #row1 p,
 #row3 p {
-    margin-left: calc(100% * 0 / 6);
+    margin-left: calc(100% * 3 / 6);
 }
 
 #row4 p{
-      margin-left: calc(100% * 2 / 6);
+      margin-left: calc(100% * 0 / 6);
 }
