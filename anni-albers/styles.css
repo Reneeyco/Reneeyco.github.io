@@ -49,3 +49,45 @@ p.callout {
 #row13 p {
     margin-left: calc(100% * 3 / 6);
 }
+
+
+/* ******************************************* */
+/* CSS for index2 */
+/* ******************************************* */
+
+/* inherit the baseline main code, above, and add to it */
+#secondLayout main {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: repeat(12, auto);
+    grid-template-areas:
+        "title title title title title title"
+        ". p1 p1 . . ."
+        "p2 p2 . . c1 c1"
+        ". p3 p3 . . ."
+        ". . p4 p4 . . ."
+        "p5 p5 . . c2 c2"
+        ". . p6 p6 . ."
+        "p7 p7 . . c3 c3"
+        ". . . . p8 p8"
+        "p9 p9 . . c4 c4"
+        ". . p10 p10 . ."
+        ". p11 p11 . . ."
+}
+
+#secondLayout #titleRow { grid-area: title; }
+#secondLayout #para1 { grid-area: p1; }
+#secondLayout #para2 { grid-area: p2; }
+#secondLayout #para3 { grid-area: p3; }
+#secondLayout #para4 { grid-area: p4; }
+#secondLayout #para5 { grid-area: p5; }
+#secondLayout #para6 { grid-area: p6; }
+#secondLayout #para7 { grid-area: p7; }
+#secondLayout #para8 { grid-area: p8; }
+#secondLayout #para9 { grid-area: p9; }
+#secondLayout #para10 { grid-area: p10; }
+#secondLayout #para11 { grid-area: p11; }
+#secondLayout #callout1 { grid-area: c1; }
+#secondLayout #callout2 { grid-area: c2; }
+#secondLayout #callout3 { grid-area: c3; }
+#secondLayout #callout4 { grid-area: c4; }
