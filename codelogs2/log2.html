@@ -51,6 +51,38 @@
  <pre><code>p { font-size: 16px; }</code></pre>
 </textarea>
 
+    <h3>2.em and rem</h3>
+    <ul>
+        <li><code>em</code> = relative to the font size of the parent element.</li>
+        <li><code>rem</code> = relative to the font size of the root element (<code>html</code>)</li>
+        <li>Useful for responsive design because text scales more naturally.</li>
+        <li>Example:</li>
+    </ul>
+
+<textarea>
+ <pre><code>p { font-size: 1.2em; }</code></pre> / based on parent's font size
+ <pre><code>h1 { font-size: 2rem; }</code></pre> / based on root font size
+</textarea>
+
+     <h3>3. vw and vh</h3>
+     <ul>
+        <li>Relative to the viewport (the visible screen area).</li>
+        <li><code>1vw</code> = 1% of the viewport's width.</li> 
+        <li><code>1vh</code> = 1% of the viewport's height.</li> 
+        <li>Perfect for making elements that adjust to the browser window size.</li>
+        <li>Example:</li>
+     </ul>
+
+<textarea>
+ <pre><code>. hero { height:100vh; width: 100vw; }</code></pre>
+</textarea>
+
+    <h2>Quick Summary:</h2>
+    <ul>
+        <li>px = absolute, always the same.</li>
+        <li>em / rem = scale with font size.</li>
+        <li>vw / vh = scale with the screen size.</li>
+    </ul>
 
 </body>
 </html>
