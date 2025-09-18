@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,22 +10,40 @@
 	<!-- external and internal CSS -->
 	<link rel="stylesheet" href="styles.css" media="all">
 	<style>
-		/* in-file CSS here */
-	</style>
+		
+        textarea{
+            border: none;
+            padding: 5px;
+            background-color: lightgray;
+        }
 
-	<!-- external and internal JavaScript -->
-	<script src="scripts.js" defer></script>
-	<script>
-		// in-page JavaScript here
-	</script>
+	</style>
 
 </head>
 <body>
+    <h1>Code Log 2: CSS Measuring Units</h1>
 
-    <h1>Absolute vs. Relative CSS Length Units</h1>
-    <li>Absolute units: Fixed sizes that don't change depending on the screen or parent element. For example, if you set something to <textarea>20px</textarea>, it'll always be 20 pixels no matter what.</li>
-    <li>Relative units: Flexble sizes that scale based on another value, like the parent element's font size or the size of the viewport. For ecample, <textarea>2em</textarea>depends on the font size of the parent, while <textarea>50%</textarea>depends on the parent container's size.</li>
-    <li>In short: absolute = fixed, relative = flexible.</li>
+    <h2>What is he difference between absolute and relative CSS length units?</h2>
+
+    <h3>Absolute vs. Relative CSS Length Units</h3>
+    <ul>
+        <li>Absolute units: Fixed sizes that don't change depending on the screen or parent element. For example, if you set something to <textarea>20px</textarea>, it'll always be 20 pixels no matter what.</li>
+        <li>Relative units: Flexble sizes that scale based on another value, like the parent element's font size or the size of the viewport. For ecample, <textarea>2em</textarea>depends on the font size of the parent, while <textarea>50%</textarea>depends on the parent container's size.</li>
+        <li>In short: absolute = fixed, relative = flexible.</li>
+    </ul>
+
+    <h2>Now, three detailed examples:</h2>
+    <h3>1.px (pixels)</h3>
+    <ul>
+        <li>Absolute unit.</li>
+        <li>1px equals one dot on the screen (through in reality, it adjusts a little depending on devixe resolution).</li>
+        <li>Commonly used for borders, cmall spacing, and when you want precise control over layout.</li>
+        <li>Example:</li>
+    </ul>
+
+  <textarea cols="50" rows="3">
+<p>{ font-size: 16px; }</p>
+    </textarea>
 
 </body>
 </html>
