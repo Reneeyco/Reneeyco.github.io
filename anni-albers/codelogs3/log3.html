@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        textarea {
+            border: none;
+            padding: 5px;
+            background-color: lightgray;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Code Log 3: CSS Media Queries</h1>
+
+    <h2>How does a CSS media query work, and why is it useful?</h2>
+    <p>A CSS media query works by checking the conditions of a device (like screen size or orientation) and applying
+        specific styles if those conditions are true. It basically tells the browser. "if this situation matches, use
+        these styles." Media queries are super useful because they make websitews responsive, meaning they adjust
+        layouts to look good on phones, tablets, laptops, or big destop screens without needing separate websites.</p>
+
+    <h2>What "media features" are supported by media queries — such as "orientation" or "max-width" — and what do they
+        do?</h2>
+    <h3>Four Media Features:</h3>
+    <h3>1.max-width</h3>
+    <p>Applies styles only when the screen is at or below a set width. Super common for making mobile breakpoints.</p>
+    <p>Example:</p>
+    <pre><code>@media (max-width: 768px) {
+        body {
+            font-size: 16px;
+        }
+    }
+    </code></pre>
+    <p>→ apply styles when the screen is tablet-sized or smaller.</p>
+
+    <h3>2.min-width</h3>
+    <p>The opposite of max-width. It applies when the screen is at or avobe a set width. Usually used for desktop
+        layouts.</p>
+    <p>Example:</p>
+    <pre><code>@media (min-width: 1024px) {
+        body {
+            font-size: 16px;
+        }
+    }
+    </code></pre>
+    <p>→ styles for larger screens like laptops and desktops.</p>
+
+    <h3>3.orientation</h3>
+    <p>Detects whether the screen is portait (taller than wide) or landscape (wider than tall). Handy for phones and
+        tablets when people rotate their devices.</p>
+    <p>Example:</p>
+    <pre><code>@media (orientation: landscape) {
+        body {
+            font-size: 16px;
+        }
+    }
+    </code></pre>
+    <p>→ apply styles when the device is sideways.</p>
+
+    <h3>4. prefers-color-scheme</h3>
+    <p>Matches a user's system setting for light mode or dark mode. This lets your site automatically adapt to their
+        preference.</p>
+    <p>Example:</p>
+    <pre><code>@media (prefers-color-scheme: dark) {
+        body {
+            background: #000;
+            color: #fff;
+        }
+    }
+    </code></pre>
+    <p>→ switches the site to dark mode if the user prefers it.</p>
+
+</body>
+
+</html>
