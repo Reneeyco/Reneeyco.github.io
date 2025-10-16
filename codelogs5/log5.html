@@ -30,6 +30,70 @@
 
 <body>
     <h1>Code Log 5: Images</h1>
+    <h2>How images are used in HTML and CSS</h2>
+    <p>Images can be used in both HTML and CSS, but their purpose and functionality are a bit different. The
+        <code>&lt;img&gt;</code> tag is used in HTML to directly display an image as part of the page’s content. It’s
+        ideal when the image itself is important — like a product photo, logo, or something users need to see. On the
+        other hand, <code>background-image</code> in CSS is mostly decorative. It’s applied to an element’s background
+        and doesn’t affect the main structure of the page. The <code>&lt;img&gt;</code> tag can use alt text, which
+        helps with accessibility, while background images are not read by screen readers. In short,
+        <code>&lt;img&gt;</code> is for content, and <code>background-image</code> is for design or layout styling.</p>
+
+    <h3>Example of an HTML image:</h3>
+    <pre><code>&lt;img src="cat.jpg" alt="Cute cat"&gt;</code></pre>
+
+    <h3>Example of a background image:</h3>
+    <pre><code>div {
+  width: 300px;
+  height: 200px;
+  background-image: url('cat.jpg');
+  background-size: cover;
+  background-position: center;
+}</code></pre>
+
+    <h2>Other CSS properties that affect background images</h2>
+    <p>Besides <code>background-image</code>, there are several CSS properties that control how background images look
+        and behave:</p>
+
+    <ul>
+        <li><strong>background-size:</strong> Controls how the image fits inside an element. For example,
+            <code>cover</code> makes the image fill the area, while <code>contain</code> ensures the whole image is
+            visible without being cropped.</li>
+        <li><strong>background-repeat:</strong> Defines whether the image repeats across the background (values include
+            <code>no-repeat</code>, <code>repeat-x</code>, and <code>repeat-y</code>).</li>
+        <li><strong>background-position:</strong> Sets where the image appears, like <code>center</code>,
+            <code>top left</code>, or <code>bottom right</code>.</li>
+    </ul>
+
+    <pre><code>div {
+  background-image: url('pattern.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}</code></pre>
+
+    <h2>Dimensions vs. resolution</h2>
+    <p><strong>Dimensions</strong> describe an image’s physical size in pixels (for example, 800×600), while
+        <strong>resolution</strong> measures how detailed or sharp the image looks, usually in pixels per inch (PPI or
+        DPI).</p>
+
+    <h2>Extra Credit: Image File Formats</h2>
+    <ul>
+        <li><strong>GIF:</strong> Great for simple animations or low-color graphics, but not ideal for detailed photos.
+        </li>
+        <li><strong>PNG:</strong> Keeps images crisp and supports transparency — perfect for logos or design graphics.
+        </li>
+        <li><strong>JPG/JPEG:</strong> Best for photos because it compresses file sizes, though some quality is lost.
+        </li>
+        <li><strong>WebP:</strong> A modern format that balances quality and file size, great for faster website
+            loading.</li>
+        <li><strong>SVG:</strong> Vector-based, so it scales perfectly without losing quality — ideal for icons or
+            logos.</li>
+    </ul>
+
+    <p><strong>In short:</strong> JPEGs are great for photos, PNGs for transparent graphics, GIFs for animations, WebP
+        for modern web optimization, and SVGs for infinitely scalable vector designs.</p>
+
 
 
 </body>
