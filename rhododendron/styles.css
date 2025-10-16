@@ -1,0 +1,85 @@
+/* TP4 — Mobile-first responsive styles */
+:root{
+  --bg:#fff;
+  --ink:#0f172a;      /* slate-900 */
+  --muted:#475569;    /* slate-600 */
+  --accent:#b4538a;   /* rhododendron pink */
+  --card:#f8fafc;     /* slate-50 */
+  --radius:16px;
+  --space:clamp(.75rem,2vw,1.25rem);
+  --wrap:min(1100px,92vw);
+}
+
+*{box-sizing:border-box}
+html,body{
+  margin:0; padding:0; background:var(--bg); color:var(--ink);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+
+.wrap{width:var(--wrap); margin-inline:auto; padding-inline:var(--space);}
+
+/* Header */
+.site-header{
+  background:linear-gradient(180deg,#ffe4f1,#fff);
+  border-bottom:1px solid #f1f5f9;
+}
+.site-header .wrap{padding-block:calc(var(--space)*1.25) calc(var(--space)*1.1);}
+h1{font-size:clamp(1.6rem,3.8vw,2.8rem); margin:0 0 .25rem 0; letter-spacing:.02em;}
+.sub{color:var(--muted); margin:0 0 .25rem 0;}
+
+/* Cards */
+.card{
+  background:var(--card);
+  border:1px solid #e2e8f0;
+  border-radius:var(--radius);
+  padding:calc(var(--space)*1.1);
+  margin-block:var(--space);
+  box-shadow:0 1px 0 rgba(15,23,42,.02), 0 12px 24px -16px rgba(15,23,42,.08);
+}
+
+/* Hero */
+.hero{margin:var(--space) 0;}
+.hero img{
+  width:100%; height:auto; display:block;
+  border-radius:var(--radius);
+  border:1px solid #e2e8f0;
+}
+.hero figcaption{font-size:.9rem; color:var(--muted); margin-top:.5rem;}
+
+/* Facts grid (dl) */
+.grid-facts{display:grid; gap:.75rem;}
+.grid-facts dt{font-weight:650; color:var(--accent);}
+.grid-facts dd{margin:.125rem 0 0 .25rem;}
+
+/* Lists */
+.bullets,.sources{padding-left:1.1rem;}
+.bullets li,.sources li{margin-block:.25rem;}
+
+/* Footer */
+.site-footer{border-top:1px solid #e2e8f0; margin-top:calc(var(--space)*1.5); color:var(--muted);}
+.site-footer .wrap{padding:calc(var(--space)*1.25) 0;}
+
+/* -----------------------------
+   Responsive behavior
+   ----------------------------- */
+
+/* >= 720px: two-column layout; facts become 2-col grid */
+@media (min-width:720px){
+  main.wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:calc(var(--space)*1.2);
+  }
+  .hero{grid-column:1 / -1;} /* hero spans both columns on desktop */
+  .facts .grid-facts{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:.9rem 1.25rem;
+  }
+}
+
+/* >= 1024px: subtle scale up */
+@media (min-width:1024px){
+  h1{font-size:3rem;}
+  .card{padding:calc(var(--space)*1.25);}
+}
