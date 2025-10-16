@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        textarea {
+            border: none;
+            padding: 5px;
+            background-color: lightgray;
+        }
+
+        pre {
+            background-color: lightgray;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            /* adds scroll if code is too long */
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Code Log 5: Images</h1>
+
+    <h2>What do these CSS properties do?</h2>
+    <ul>
+        <li>color</li>
+        <li>background-color</li>
+        <li>border-color</li>
+    </ul>
+    <h2>CSS Color Properties</h2>
+
+    <h3>1. Color</h3>
+    <ul>
+        <li>Changes the text color of an element.</li>
+        <li>Example:</li>
+    </ul>
+    <pre><code>
+            p {
+                color:blue;
+            }
+        </code></pre>
+
+    <h3>2. Background-color</h3>
+    <ul>
+        <li>Sets the background color of an element.</li>
+        <li>Example:</li>
+    </ul>
+    <pre><code>
+            body {
+                background-color: lightyellow;
+            }
+        </code></pre>
+
+    <h3>3. Border-color</h3>
+    <ul>
+        <li>Defines the color of an element's border. </li>
+        <li>Example:</li>
+    </ul>
+    <pre><code>
+            div {
+                border: 2px solid red;
+            }
+        </code></pre>
+
+
+    <h2>How does CSS accept color as a value? Provide examples of colors in these styles:</h2>
+    <ul>
+        <li>Named</li>
+        <li>Hexadecimal</li>
+        <li>RGB</li>
+        <li>Any other format besides these 3</li>
+    </ul>
+
+    <h2>Ways CSS Accepts Color Values</h2>
+    <h3>1. Named Colors</h3>
+    <ul>
+        <li>Use color names that browsers recognize.</li>
+        <li>Example:</li>
+    </ul>
+    <pre><code>
+            h1 {
+                color: coral;
+            }
+        </code></pre>
+    <h3>2. Hexadecimal Colors</h3>
+    <ul>
+        <li>Use a mix of 6 digits (0-9) (A-F) to define red, green, and blue values.</li>
+        <li>Example:</li>
+    </ul>
+    <pre><code>
+            p {
+                color: #ff69b4;
+            }
+        </code></pre>
+    <h3>3. RGB Colors</h3>
+    <ul>
+        <li>Use numeric values for red, green, and blue (0-255).</li>
+        <li>Example:</li>
+    </ul>
+    <pre><code>
+            body {
+                background-color: rgb(255, 228, 225);
+            }
+        </code></pre>
+    <h3>4. HSL (Hue, Saturation, Lightness)</h3>
+    <ul>
+        <li>Uses color values based on color tone, saturation %, and lightness %.</li>
+        <li>Example:</li>
+    </ul>
+    <pre><code>
+            h2 {
+                color: hsl(340, 100%, 70%);
+            }
+        </code></pre>
+    <h2>👉 In short:</h2>
+    <ul>
+        <li>color = text color</li>
+        <li>background color = element's background</li>
+        <li>border-color = outline / border color</li>
+    </ul>
+    <p>And CSS supports several color formats like named, hex, RGB, and HSL for more precise styling.</p>
+
+</body>
+
+</html>
