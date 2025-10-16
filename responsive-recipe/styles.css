@@ -1,77 +1,88 @@
-:root{
-  --ink:#000;
-  --bg:#fff;
-  --rule:#e5e5e5;
-  --wrap:min(1100px,92vw);
-  --space:clamp(.75rem,2vw,1.25rem);
-  --radius:14px;
+/* Responsive Soufflé Pancakes Recipe - clean, simple, mobile-first */
+:root {
+  --ink: #000;
+  --muted: #333;
+  --rule: #e5e5e5;
+  --bg: #fff;
+  --wrap: min(900px, 92vw);
+  --space: clamp(.75rem, 2vw, 1.25rem);
+  --radius: 10px;
 }
 
-*{box-sizing:border-box}
-html,body{
-  margin:0;padding:0;
-  background:var(--bg);color:var(--ink);
-  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--ink);
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
-.wrap{width:var(--wrap);margin-inline:auto;padding-inline:var(--space);}
-h1,h2,h3{line-height:1.25;margin:0 0 .5rem;}
-h1{font-weight:800;font-size:clamp(1.75rem,4vw,2.5rem);}
-h2{font-weight:700;font-size:clamp(1.25rem,3vw,1.5rem);}
-h3{font-weight:700;font-size:1rem;}
-ul,ol{margin:.5rem 0 1rem 1.25rem;}
+.wrap {
+  width: var(--wrap);
+  margin-inline: auto;
+  padding: calc(var(--space) * 1.25) var(--space);
+}
 
 /* Header */
-.site-header{border-bottom:1px solid var(--rule);}
-.site-header .wrap{
-  display:flex;align-items:center;justify-content:space-between;
-  padding-block:calc(var(--space)*.8);
+.page-header h1 {
+  margin: 0 0 .25rem 0;
+  font-size: clamp(1.8rem, 4.5vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.2;
 }
-.brand{font-weight:800;}
-.nav a{color:var(--ink);text-decoration:none;margin-left:1rem;}
-.nav a:hover{text-decoration:underline;}
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin: .25rem 0 1rem;
+  color: var(--muted);
+}
+.meta span { white-space: nowrap; }
 
-/* Hero */
-.hero{display:grid;gap:var(--space);margin-block:var(--space);}
-.img-placeholder{
-  height:220px;border:1px solid var(--ink);border-radius:var(--radius);
-  position:relative;background:#fff;
+/* Hero image */
+.hero {
+  margin: 1.5rem 0;
 }
-.img-placeholder::before,
-.img-placeholder::after{
-  content:"";position:absolute;inset:0;
-  background:
-    linear-gradient(to bottom right,transparent 49.5%,var(--ink) 50%,transparent 50.5%),
-    linear-gradient(to top right,transparent 49.5%,var(--ink) 50%,transparent 50.5%);
-  opacity:.3;
+.hero img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--rule);
+}
+.hero figcaption {
+  font-size: .9rem;
+  color: var(--muted);
+  margin-top: .5rem;
+  text-align: center;
 }
 
-/* Mobile-first content stack */
-.content{display:grid;gap:var(--space);}
-.ingredients,.directions,.summary{
-  border:1px solid var(--ink);
-  border-radius:var(--radius);
-  padding:calc(var(--space)*1);
+/* Grid cards */
+.grid {
+  display: grid;
+  gap: var(--space);
 }
-.tip{border:1px dashed var(--ink);padding:.75rem;border-radius:10px;margin-top:1rem;}
-.troubleshoot{margin-top:1rem;}
-.summary{margin-block:var(--space);}
-.summary-grid{display:grid;gap:.75rem;}
+.card {
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  padding: calc(var(--space) * 1);
+  background: #fff;
+}
+.list { margin: .5rem 0 0 1.2rem; }
+.list li { margin: .3rem 0; }
 
 /* Footer */
-.site-footer{border-top:1px solid var(--rule);margin-top:calc(var(--space)*1.5);}
-.site-footer .wrap{
-  display:flex;align-items:center;justify-content:space-between;
-  padding-block:calc(var(--space)*1);
+.page-footer {
+  border-top: 1px solid var(--rule);
+  margin-top: calc(var(--space) * 1.5);
+  padding-top: calc(var(--space) * 1);
+  text-align: center;
+  color: var(--muted);
+  font-size: .95rem;
 }
-.backtop{text-decoration:none;color:var(--ink);}
-.backtop:hover{text-decoration:underline;}
 
-/* Responsive layout for desktop */
-@media (min-width:720px){
-  .hero{grid-template-columns:7fr 5fr;align-items:center;}
-  .img-placeholder{height:420px;}
-
-  .content{grid-template-columns:4fr 8fr;align-items:start;gap:calc(var(--space)*1.2);}
-  .summary-grid{grid-template-columns:1fr 1fr;gap:1rem 2rem;}
+/* Responsive layout */
+@media (min-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
 }
