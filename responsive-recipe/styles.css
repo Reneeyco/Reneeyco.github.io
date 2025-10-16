@@ -1,4 +1,4 @@
-/* Responsive Soufflé Pancakes Recipe - clean, simple, mobile-first */
+/* TP6 Responsive Recipe – Japanese Soufflé Pancakes */
 :root {
   --ink: #000;
   --muted: #333;
@@ -55,7 +55,7 @@ html, body {
   text-align: center;
 }
 
-/* Grid cards */
+/* Cards and layout */
 .grid {
   display: grid;
   gap: var(--space);
@@ -66,8 +66,12 @@ html, body {
   padding: calc(var(--space) * 1);
   background: #fff;
 }
-.list { margin: .5rem 0 0 1.2rem; }
-.list li { margin: .3rem 0; }
+.list {
+  margin: .5rem 0 0 1.2rem;
+}
+.list li {
+  margin: .3rem 0;
+}
 
 /* Footer */
 .page-footer {
@@ -79,10 +83,10 @@ html, body {
   font-size: .95rem;
 }
 
-/* Responsive layout */
+/* Responsive layout for desktop */
 @media (min-width: 800px) {
   .grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Ingredients | Directions */
     align-items: start;
   }
 }
