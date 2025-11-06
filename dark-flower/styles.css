@@ -1,0 +1,125 @@
+/* TP8 — Mobile-first responsive styles with Dark Mode tokens */
+:root{
+  --bg:#fff;
+  --ink:#0f172a;      /* slate-900 */
+  --muted:#475569;    /* slate-600 */
+  --accent:#b4538a;   /* rhododendron pink */
+  --card:#f8fafc;     /* slate-50 */
+  --border:#e2e8f0;   /* slate-200 */
+  --header-grad-start:#ffe4f1;
+  --header-grad-end:#ffffff;
+
+  --radius:16px;
+  --space:clamp(.75rem,2vw,1.25rem);
+  --wrap:min(1100px,92vw);
+}
+
+*{box-sizing:border-box}
+html,body{
+  margin:0; padding:0; background:var(--bg); color:var(--ink);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.6;
+}
+
+.wrap{width:var(--wrap); margin-inline:auto; padding-inline:var(--space);}
+
+/* Header */
+.site-header{
+  background:linear-gradient(180deg,var(--header-grad-start),var(--header-grad-end));
+  border-bottom:1px solid var(--border);
+}
+.site-header .wrap{
+  display:flex; align-items:flex-end; gap:1rem; flex-wrap:wrap;
+  padding-block:calc(var(--space)*1.25) calc(var(--space)*1.1);
+}
+h1{font-size:clamp(1.6rem,3.8vw,2.8rem); margin:0 0 .25rem 0; letter-spacing:.02em;}
+.sub{color:var(--muted); margin:0 0 .25rem 0;}
+
+/* Dark Mode Button (light styling) */
+#darkModeBtn{
+  margin-left:auto;
+  appearance:none;
+  border:1px solid var(--border);
+  padding:.5rem .9rem;
+  border-radius:.5rem;
+  background:#f7f7f7;
+  cursor:pointer;
+  font-weight:600;
+}
+#darkModeBtn:hover{ background:#efefef; }
+#darkModeBtn:focus-visible{ outline:3px solid #0057ff88; outline-offset:2px; }
+
+/* Cards */
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:calc(var(--space)*1.1);
+  margin-block:var(--space);
+  box-shadow:0 1px 0 rgba(15,23,42,.02), 0 12px 24px -16px rgba(15,23,42,.08);
+}
+
+/* Hero */
+.hero{margin:var(--space) 0;}
+.hero img{
+  width:100%; height:auto; display:block;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+}
+.hero figcaption{font-size:.9rem; color:var(--muted); margin-top:.5rem;}
+
+/* Facts grid (dl) */
+.grid-facts{display:grid; gap:.75rem;}
+.grid-facts dt{font-weight:650; color:var(--accent);}
+.grid-facts dd{margin:.125rem 0 0 .25rem;}
+
+/* Lists */
+.bullets,.sources{padding-left:1.1rem;}
+.bullets li,.sources li{margin-block:.25rem;}
+.sources a{ color:inherit; text-underline-offset:2px; }
+
+/* Footer */
+.site-footer{border-top:1px solid var(--border); margin-top:calc(var(--space)*1.5); color:var(--muted);}
+.site-footer .wrap{padding:calc(var(--space)*1.25) 0;}
+
+/* -----------------------------
+   DARK MODE: flip tokens only
+   ----------------------------- */
+body.darkMode{
+  --bg:#0f1115;
+  --ink:#e7eaf0;
+  --muted:#a8b0c2;
+  --accent:#f0a6ce;
+  --card:#121620;
+  --border:#222836;
+  --header-grad-start:#141a27;
+  --header-grad-end:#0f1115;
+}
+
+/* Optional: dark-mode link emphasis */
+body.darkMode .sources a { color:#a8c7ff; }
+body.darkMode .sources a:hover { color:#d8e4ff; }
+
+/* -----------------------------
+   Responsive behavior
+   ----------------------------- */
+
+/* >= 720px: two-column layout; facts become 2-col grid */
+@media (min-width:720px){
+  main.wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:calc(var(--space)*1.2);
+  }
+  .hero{grid-column:1 / -1;} /* hero spans both columns on desktop */
+  .facts .grid-facts{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:.9rem 1.25rem;
+  }
+}
+
+/* >= 1024px: subtle scale up */
+@media (min-width:1024px){
+  h1{font-size:3rem;}
+  .card{padding:calc(var(--space)*1.25);}
+}
