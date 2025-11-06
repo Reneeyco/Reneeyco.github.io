@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matcha Latte — Recipe 3</title>
+  <link rel="stylesheet" href="styles.css" media="all" />
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Main">
+    <a class="nav__brand" href="index.html">Recipe Mini-Site</a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">☰</button>
+    <ul id="nav-menu" class="nav__menu">
+      <li><a href="index.html">Home</a></li>
+
+      <li class="has-submenu">
+        <button class="submenu__toggle" aria-expanded="false" aria-haspopup="true">My Recipes</button>
+        <ul class="submenu">
+          <li><a href="recipe1.html">Soufflé Pancakes</a></li>
+          <li><a href="recipe2.html">Garlic Butter Shrimp Pasta</a></li>
+          <li><a href="recipe3.html" aria-current="page">Matcha Latte</a></li>
+        </ul>
+      </li>
+
+      <li class="has-submenu">
+        <button class="submenu__toggle" aria-expanded="false" aria-haspopup="true">Favorite Recipe Sites</button>
+        <ul class="submenu">
+          <li><a href="https://www.seriouseats.com/" target="_blank" rel="noopener">Serious Eats</a></li>
+          <li><a href="https://www.bonappetit.com/" target="_blank" rel="noopener">Bon Appétit</a></li>
+          <li><a href="https://www.simplyrecipes.com/" target="_blank" rel="noopener">Simply Recipes</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Content -->
+  <main class="wrap">
+    <header class="page-header">
+      <h1>Matcha Latte</h1>
+      <p class="meta">
+        <span><strong>Total:</strong> 5–7 min</span>
+        <span><strong>Active:</strong> 5 min</span>
+        <span><strong>Yield:</strong> 1 serving</span>
+      </p>
+    </header>
+
+    <figure class="hero">
+      <img
+        src="https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1600&auto=format&fit=crop"
+        alt="Whisking bright green matcha in a bowl" />
+      <figcaption>Smooth, earthy, and creamy—serve hot or iced.</figcaption>
+    </figure>
+
+    <section class="grid">
+      <section class="card">
+        <h2>Ingredients</h2>
+        <ul class="list">
+          <li>2 tsp ceremonial-grade matcha</li>
+          <li>60 ml hot water (≈80 °C / 176 °F)</li>
+          <li>200 ml milk (dairy or oat/almond)</li>
+          <li>Honey or syrup, to taste (optional)</li>
+          <li>Ice (for iced version)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Directions</h2>
+        <ol class="list">
+          <li><strong>Sift:</strong> Sift matcha into a bowl to remove clumps.</li>
+          <li><strong>Whisk:</strong> Add hot water; whisk in a fast “W” motion until frothy.</li>
+          <li><strong>Milk:</strong> Warm and froth milk (or keep cold for iced). Sweeten if desired.</li>
+          <li><strong>Combine:</strong> Pour matcha into milk. For iced, add ice to a glass, milk, then top with whisked matcha.</li>
+          <li><strong>Serve:</strong> Enjoy immediately; stir gently before sipping.</li>
+        </ol>
+      </section>
+    </section>
+
+    <footer class="page-footer">
+      <p>© 2025 Renee Yang · TP7 Recipe Mini-Site</p>
+    </footer>
+  </main>
+
+</body>
+</html>
