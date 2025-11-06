@@ -1,0 +1,217 @@
+/* TP6 Responsive Recipe – Japanese Soufflé Pancakes */
+:root {
+    --ink: #000;
+    --muted: #333;
+    --rule: #e5e5e5;
+    --bg: #fff;
+    --wrap: min(900px, 92vw);
+    --space: clamp(.75rem, 2vw, 1.25rem);
+    --radius: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.wrap {
+    width: var(--wrap);
+    margin-inline: auto;
+    padding: calc(var(--space) * 1.25) var(--space);
+}
+
+/* Header */
+.page-header h1 {
+    margin: 0 0 .25rem 0;
+    font-size: clamp(1.8rem, 4.5vw, 2.4rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin: .25rem 0 1rem;
+    color: var(--muted);
+}
+
+.meta span {
+    white-space: nowrap;
+}
+
+/* Hero image */
+.hero {
+    margin: 1.5rem 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--rule);
+}
+
+.hero figcaption {
+    font-size: .9rem;
+    color: var(--muted);
+    margin-top: .5rem;
+    text-align: center;
+}
+
+/* Cards and layout */
+.grid {
+    display: grid;
+    gap: var(--space);
+}
+
+.card {
+    border: 1px solid var(--ink);
+    border-radius: var(--radius);
+    padding: calc(var(--space) * 1);
+    background: #fff;
+}
+
+.list {
+    margin: .5rem 0 0 1.2rem;
+}
+
+.list li {
+    margin: .3rem 0;
+}
+
+/* Footer */
+.page-footer {
+    border-top: 1px solid var(--rule);
+    margin-top: calc(var(--space) * 1.5);
+    padding-top: calc(var(--space) * 1);
+    text-align: center;
+    color: var(--muted);
+    font-size: .95rem;
+}
+
+/* Responsive layout for desktop */
+@media (min-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        /* Ingredients | Directions */
+        align-items: start;
+    }
+}
+
+/* ===============================
+   NAV MENU (Lesson 36 / TP7)
+   =============================== */
+
+.nav {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    z-index: 50;
+}
+
+.nav__brand {
+    font-weight: 700;
+    color: #222;
+}
+
+.nav__toggle {
+    margin-left: auto;
+    font-size: 1.25rem;
+    background: transparent;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.nav__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    /* mobile: hidden */
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav__menu a {
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.nav__menu a:hover {
+    background: #f5f5f5;
+    text-decoration: none;
+}
+
+.has-submenu {
+    position: relative;
+}
+
+.submenu__toggle {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.submenu {
+    list-style: none;
+    margin: 6px 0 0;
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: none;
+    background: #fff;
+}
+
+/* JS toggle classes */
+.nav__menu.is-open {
+    display: flex;
+}
+
+.submenu.is-open {
+    display: block;
+}
+
+/* desktop layout */
+@media (min-width: 800px) {
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__menu {
+        display: flex !important;
+        flex-direction: row;
+        gap: 12px;
+        width: auto;
+        margin-left: auto;
+    }
+
+    .has-submenu:hover .submenu {
+        display: block;
+        position: absolute;
+        top: 115%;
+        left: 0;
+        min-width: 240px;
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    }
+}
