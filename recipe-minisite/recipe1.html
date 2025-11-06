@@ -1,97 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- meta tags and title -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soufflé Pancakes — Recipe 1</title>
 
-  <!-- external CSS + JS -->
-  <link rel="stylesheet" href="styles.css" media="all" />
-  <script defer src="scripts.js"></script>
+<head>
+    <!-- meta tags and title -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soufflé Pancakes — Recipe 1</title>
+
+    <!-- external CSS + JS -->
+    <link rel="stylesheet" href="styles.css" media="all" />
+    <script defer src="scripts.js"></script>
 </head>
+
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav" aria-label="Main">
-    <a class="nav__brand" href="index.html">Recipe Mini-Site</a>
-    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">☰</button>
-    <ul id="nav-menu" class="nav__menu">
-      <li><a href="index.html">Home</a></li>
+    <!-- Navigation -->
+    <nav class="nav" aria-label="Main">
+        <a class="nav__brand" href="index.html">Recipe Mini-Site</a>
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu"
+            aria-label="Toggle navigation">☰</button>
+        <ul id="nav-menu" class="nav__menu">
+            <li><a href="index.html">Home</a></li>
 
-      <li class="has-submenu">
-        <button class="submenu__toggle" aria-expanded="false" aria-haspopup="true">My Recipes</button>
-        <ul class="submenu">
-          <li><a href="recipe1.html" aria-current="page">Soufflé Pancakes</a></li>
-          <li><a href="recipe2.html">Garlic Butter Shrimp Pasta</a></li>
-          <li><a href="recipe3.html">Matcha Latte</a></li>
+            <li class="has-submenu">
+                <button class="submenu__toggle" aria-expanded="false" aria-haspopup="true">My Recipes</button>
+                <ul class="submenu">
+                    <li><a href="recipe1.html" aria-current="page">Soufflé Pancakes</a></li>
+                    <li><a href="recipe2.html">Garlic Butter Shrimp Pasta</a></li>
+                    <li><a href="recipe3.html">Matcha Latte</a></li>
+                </ul>
+            </li>
+
+            <li class="has-submenu">
+                <button class="submenu__toggle" aria-expanded="false" aria-haspopup="true">Favorite Recipe
+                    Sites</button>
+                <ul class="submenu">
+                    <li><a href="https://www.seriouseats.com/" target="_blank" rel="noopener">Serious Eats</a></li>
+                    <li><a href="https://www.bonappetit.com/" target="_blank" rel="noopener">Bon Appétit</a></li>
+                    <li><a href="https://www.simplyrecipes.com/" target="_blank" rel="noopener">Simply Recipes</a></li>
+                </ul>
+            </li>
         </ul>
-      </li>
+    </nav>
 
-      <li class="has-submenu">
-        <button class="submenu__toggle" aria-expanded="false" aria-haspopup="true">Favorite Recipe Sites</button>
-        <ul class="submenu">
-          <li><a href="https://www.seriouseats.com/" target="_blank" rel="noopener">Serious Eats</a></li>
-          <li><a href="https://www.bonappetit.com/" target="_blank" rel="noopener">Bon Appétit</a></li>
-          <li><a href="https://www.simplyrecipes.com/" target="_blank" rel="noopener">Simply Recipes</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+    <!-- Original TP6 Recipe -->
+    <main class="wrap">
+        <header class="page-header">
+            <h1>Japanese Soufflé Pancakes</h1>
+            <p class="meta">
+                <span><strong>Total:</strong> ~35 min</span>
+                <span><strong>Active:</strong> 25 min</span>
+                <span><strong>Yield:</strong> 1–2 servings</span>
+            </p>
+        </header>
 
-  <!-- Original TP6 Recipe -->
-  <main class="wrap">
-    <header class="page-header">
-      <h1>Japanese Soufflé Pancakes</h1>
-      <p class="meta">
-        <span><strong>Total:</strong> ~35 min</span>
-        <span><strong>Active:</strong> 25 min</span>
-        <span><strong>Yield:</strong> 1–2 servings</span>
-      </p>
-    </header>
+        <!-- IMAGE SECTION -->
+        <figure class="hero">
+            <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=1600&auto=format&fit=crop"
+                alt="Fluffy Japanese soufflé pancakes dusted with powdered sugar and syrup" />
+            <figcaption>Light, airy, and jiggly pancakes — a true Japanese-style soufflé treat.</figcaption>
+        </figure>
 
-    <!-- IMAGE SECTION -->
-    <figure class="hero">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Souffle_Pancake_with_berries.jpg"
-        alt="Fluffy Japanese Soufflé Pancakes stacked with fruit and syrup"
-      />
-      <figcaption>Light, airy pancakes made by folding whipped meringue into yolk batter.</figcaption>
-    </figure>
 
-    <!-- GRID LAYOUT -->
-    <section class="grid">
-      <section class="card">
-        <h2>Ingredients</h2>
-        <ul class="list">
-          <li>2 large eggs (50 g each w/o shell)</li>
-          <li>1½ Tbsp whole milk</li>
-          <li>¼ tsp pure vanilla extract</li>
-          <li>¼ cup cake flour</li>
-          <li>½ tsp baking powder</li>
-          <li>2 Tbsp sugar</li>
-          <li>1 Tbsp neutral oil (for greasing the pan)</li>
-          <li>2 Tbsp water (for steaming)</li>
-        </ul>
-      </section>
+        <!-- GRID LAYOUT -->
+        <section class="grid">
+            <section class="card">
+                <h2>Ingredients</h2>
+                <ul class="list">
+                    <li>2 large eggs (50 g each w/o shell)</li>
+                    <li>1½ Tbsp whole milk</li>
+                    <li>¼ tsp pure vanilla extract</li>
+                    <li>¼ cup cake flour</li>
+                    <li>½ tsp baking powder</li>
+                    <li>2 Tbsp sugar</li>
+                    <li>1 Tbsp neutral oil (for greasing the pan)</li>
+                    <li>2 Tbsp water (for steaming)</li>
+                </ul>
+            </section>
 
-      <section class="card">
-        <h2>Directions</h2>
-        <ol class="list">
-          <li><strong>Make yolk batter:</strong> Whisk yolks, milk, and vanilla. Sift in cake flour + baking powder; mix until smooth.</li>
-          <li><strong>Whip meringue:</strong> Beat whites until foamy; add sugar gradually; whip to glossy medium peaks.</li>
-          <li><strong>Fold:</strong> Whisk in ⅓ of meringue to loosen; fold remaining meringue gently until combined.</li>
-          <li><strong>Portion:</strong> Lightly oil a nonstick pan, heat on low. Scoop tall mounds of batter; add more after 1 min.</li>
-          <li><strong>Steam-cook:</strong> Add 1 Tbsp water to pan (not on batter), cover, and cook 6–7 minutes.</li>
-          <li><strong>Flip & finish:</strong> Flip carefully, add more water, cover, and cook another 4–5 minutes until fluffy and jiggly.</li>
-        </ol>
-      </section>
-    </section>
+            <section class="card">
+                <h2>Directions</h2>
+                <ol class="list">
+                    <li><strong>Make yolk batter:</strong> Whisk yolks, milk, and vanilla. Sift in cake flour + baking
+                        powder; mix until smooth.</li>
+                    <li><strong>Whip meringue:</strong> Beat whites until foamy; add sugar gradually; whip to glossy
+                        medium peaks.</li>
+                    <li><strong>Fold:</strong> Whisk in ⅓ of meringue to loosen; fold remaining meringue gently until
+                        combined.</li>
+                    <li><strong>Portion:</strong> Lightly oil a nonstick pan, heat on low. Scoop tall mounds of batter;
+                        add more after 1 min.</li>
+                    <li><strong>Steam-cook:</strong> Add 1 Tbsp water to pan (not on batter), cover, and cook 6–7
+                        minutes.</li>
+                    <li><strong>Flip & finish:</strong> Flip carefully, add more water, cover, and cook another 4–5
+                        minutes until fluffy and jiggly.</li>
+                </ol>
+            </section>
+        </section>
 
-    <footer class="page-footer">
-      <p>© 2025 Renee Yang · TP7 Recipe Mini-Site</p>
-    </footer>
-  </main>
+        <footer class="page-footer">
+            <p>© 2025 Renee Yang · TP7 Recipe Mini-Site</p>
+        </footer>
+    </main>
 
 </body>
+
 </html>
