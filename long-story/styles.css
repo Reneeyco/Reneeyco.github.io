@@ -1,0 +1,53 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* General section layout */
+section.panel {
+  height: 100vh; /* full-screen per section */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+}
+
+.content {
+  max-width: 700px;
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 2rem;
+  border-radius: 1.5rem;
+}
+
+/* Step 1: Intro */
+#intro {
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");
+}
+
+/* Step 2: Morning */
+.morning {
+  background-image: url("https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1600&q=80");
+}
+
+/* Step 3: Campus */
+.campus {
+  back
