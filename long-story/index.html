@@ -15,48 +15,43 @@
         <section class="panel intro">
             <div class="content">
                 <h1>The Journey of Light</h1>
-                <p>Scroll to travel from dawn to dusk across the world.</p>
+                <p>Scroll sideways to travel from dawn to dusk across the world.</p>
             </div>
         </section>
 
         <section class="panel dawn">
             <div class="content">
                 <h2>Dawn</h2>
-                <p>First rays paint the sky in pink and gold — a quiet promise of a new beginning.</p>
+                <p>The world awakens — soft light breaks the horizon, carrying warmth and hope.</p>
             </div>
         </section>
 
         <section class="panel noon">
             <div class="content">
                 <h2>Noon</h2>
-                <p>The sun burns high, the world alive with motion, color, and sound.</p>
+                <p>Under the bright sky, life is full of motion — sunlight sharp, shadows short.</p>
             </div>
         </section>
 
         <section class="panel sunset">
             <div class="content">
                 <h2>Sunset</h2>
-                <p>Shadows stretch long as the day softens into orange and crimson light.</p>
+                <p>The colors fade to amber and rose, closing another beautiful day.</p>
             </div>
         </section>
 
         <section class="panel night">
             <div class="content">
                 <h2>Night</h2>
-                <p>Stars bloom in the deep sky — the endless rhythm begins again.</p>
+                <p>The stars bloom quietly above — a soft reminder of endless cycles of light.</p>
             </div>
         </section>
 
     </div>
 
     <script>
-        // Simple horizontal scroll logic
+        // simple horizontal scroll on vertical wheel movement
         const scrollContainer = document.querySelector(".scroll-container");
         window.addEventListener("wheel", (evt) => {
             evt.preventDefault();
-            scrollContainer.scrollLeft += evt.deltaY;
-        });
-    </script>
-</body>
-
-</html>
+            scrollContainer.scrollLeft += evt.d
