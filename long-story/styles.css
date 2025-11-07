@@ -1,87 +1,90 @@
-/* Reset and basic styles */
+/* Reset and basic setup */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-html, body {
-  height: 100%;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+html,
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-/* Section base layout */
+/* Section layout */
 section.panel {
-  height: 100vh; /* full screen per section */
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  padding: 2rem;
+    height: 100vh;
+    /* each step fills the screen */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 2rem;
 }
 
+/* Semi-transparent box for text */
 .content {
-  max-width: 700px;
-  background-color: rgba(0, 0, 0, 0.45);
-  padding: 2rem 3rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    max-width: 700px;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 2rem 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Background images for each scene */
+/* Unique background images per section */
 .intro {
-  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");
 }
 
 .morning {
-  background-image: url("https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1600&q=80");
+    background-image: url("https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1600&q=80");
 }
 
 .campus {
-  background-image: url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80");
+    background-image: url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80");
 }
 
 .gallery {
-  background-image: url("https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?auto=format&fit=crop&w=1600&q=80");
+    background-image: url("https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?auto=format&fit=crop&w=1600&q=80");
 }
 
 .night {
-  background-image: url("https://images.unsplash.com/photo-1500336624523-d727130c3328?auto=format&fit=crop&w=1600&q=80");
+    background-image: url("https://images.unsplash.com/photo-1500336624523-d727130c3328?auto=format&fit=crop&w=1600&q=80");
 }
 
 /* Typography */
 h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 h2 {
-  font-size: 2.3rem;
-  margin-bottom: 1rem;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
 }
 
 p {
-  font-size: 1.1rem;
-  line-height: 1.7rem;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
 }
 
-/* Fade effect between sections */
+/* Gradient fade at bottom for smooth transitions */
 .panel::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
 }
