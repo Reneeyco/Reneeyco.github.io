@@ -52,12 +52,17 @@
     </div>
 
     <script>
-        // Convert vertical scroll into horizontal scroll
-        const scrollContainer = document.querySelector(".outer-wrapper");
-        scrollContainer.addEventListener("wheel", (evt) => {
-            evt.preventDefault();
-            scrollContainer.scrollLeft += evt.deltaY;
-        });
+        // Corrected scroll handler (passive: false required)
+        const wrapper = document.querySelector(".outer-wrapper");
+
+        wrapper.addEventListener(
+            "wheel",
+            (evt) => {
+                evt.preventDefault();
+                wrapper.scrollLeft += evt.deltaY;
+            },
+            { passive: false }   // <— this line makes the event cancellable
+        );
     </script>
 </body>
 
