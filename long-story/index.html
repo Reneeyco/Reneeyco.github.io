@@ -1,69 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Journey of Light</title>
-    <link rel="stylesheet" href="styles.css" />
+  <!-- meta tags and title -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiny Project 9: A Day at the Ocean</title>
+
+  <!-- external CSS and JS to load Locomotive Scroll -->
+  <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+  <script>
+    // Initialize Locomotive Scroll after the page fully loads
+    window.addEventListener("load", function() {
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector("main"),
+        smooth: true
+      });
+    });
+  </script>
+
+  <!-- your CSS -->
+  <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="outer-wrapper">
-        <div class="horizontal-scroll">
+  <main>
 
-            <section class="panel intro">
-                <div class="content">
-                    <h1>The Journey of Light</h1>
-                    <p>Scroll to travel from dawn to dusk across the world.</p>
-                </div>
-            </section>
+    <!-- Section 1 -->
+    <section id="section1">
+      <div class="content"
+        data-scroll
+        data-scroll-speed="-.5"
+        data-scroll-offset="0%, 0%">
+        <h1>A Day at the Ocean</h1>
+      </div>
 
-            <section class="panel dawn">
-                <div class="content">
-                    <h2>Dawn</h2>
-                    <p>The first rays break the horizon. Soft light, quiet air, and new beginnings.</p>
-                </div>
-            </section>
+      <div class="instructions" data-scroll>
+        Scroll Down
+      </div>
+    </section>
 
-            <section class="panel noon">
-                <div class="content">
-                    <h2>Noon</h2>
-                    <p>The sun stands high and strong. The world glows with energy and life.</p>
-                </div>
-            </section>
+    <!-- Section 2 -->
+    <section id="section2">
+      <div class="content"
+        data-scroll
+        data-scroll-speed="-.5"
+        data-scroll-offset="-20%, -20%">
+        <p>Morning light dances on gentle waves as the tide hums softly against the shore.</p>
+      </div>
+    </section>
 
-            <section class="panel sunset">
-                <div class="content">
-                    <h2>Sunset</h2>
-                    <p>Shadows stretch long and the sky burns with color before fading to calm.</p>
-                </div>
-            </section>
+    <!-- Section 3 -->
+    <section id="section3">
+      <div class="content"
+        data-scroll
+        data-scroll-speed="-.5"
+        data-scroll-offset="-20%, -20%">
+        <p>Seagulls trace arcs through the sky while the horizon shimmers like glass.</p>
+      </div>
+    </section>
 
-            <section class="panel night">
-                <div class="content">
-                    <h2>Night</h2>
-                    <p>Stars bloom across the dark sky. A peaceful rhythm that always returns.</p>
-                </div>
-            </section>
+    <!-- Section 4 -->
+    <section id="section4">
+      <div class="content"
+        data-scroll
+        data-scroll-speed="-.5"
+        data-scroll-offset="-20%, -20%">
+        <p>By noon the sea glows with warmth and laughter drifts across the wind.</p>
+      </div>
+    </section>
 
-        </div>
-    </div>
+    <!-- Section 5 -->
+    <section id="section5">
+      <div class="content"
+        data-scroll
+        data-scroll-speed="-.5"
+        data-scroll-offset="-20%, -20%">
+        <p>As night falls, the ocean mirrors the stars — quiet, vast, and endless.</p>
+      </div>
+    </section>
 
-    <script>
-        // Corrected scroll handler (passive: false required)
-        const wrapper = document.querySelector(".outer-wrapper");
+  </main>
 
-        wrapper.addEventListener(
-            "wheel",
-            (evt) => {
-                evt.preventDefault();
-                wrapper.scrollLeft += evt.deltaY;
-            },
-            { passive: false }   // <— this line makes the event cancellable
-        );
-    </script>
 </body>
-
 </html>
