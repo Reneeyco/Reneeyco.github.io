@@ -8,49 +8,55 @@
   <!-- Animate.css + Wow.js -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script>new WOW().init();</script>
 
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <!-- Step 1 -->
-  <section class="panel" id="intro">
-    <div class="content wow animate__fadeInDown">
+  <section class="panel intro wow animate__fadeInDown" data-wow-duration="1.2s">
+    <div class="content">
       <h1>A Day in the Life</h1>
       <p>Follow a student’s quiet morning to a colorful night of creativity.</p>
     </div>
   </section>
 
   <!-- Step 2 -->
-  <section class="panel morning">
-    <div class="content wow animate__fadeInLeft">
-      <h2>Morning – Waking Up</h2>
+  <section class="panel morning wow animate__fadeInLeft" data-wow-duration="1.2s">
+    <div class="content">
+      <h2>Morning — Waking Up</h2>
       <p>The light peeks through the dorm window. A new day begins with coffee and quiet thoughts.</p>
     </div>
   </section>
 
   <!-- Step 3 -->
-  <section class="panel campus">
-    <div class="content wow animate__fadeInUp">
-      <h2>Afternoon – On Campus</h2>
+  <section class="panel campus wow animate__fadeInUp" data-wow-duration="1.2s">
+    <div class="content">
+      <h2>Afternoon — On Campus</h2>
       <p>Walking across campus, the air buzzes with ideas and laughter. Deadlines, caffeine, and design critiques fill the hours.</p>
     </div>
   </section>
 
   <!-- Step 4 -->
-  <section class="panel gallery">
-    <div class="content wow animate__fadeInRight">
-      <h2>Evening – Gallery Opening</h2>
+  <section class="panel gallery wow animate__fadeInRight" data-wow-duration="1.2s">
+    <div class="content">
+      <h2>Evening — Gallery Opening</h2>
       <p>Soft lights, printed posters, and friends gathered around. The work finally comes to life.</p>
     </div>
   </section>
 
   <!-- Step 5 -->
-  <section class="panel night">
-    <div class="content wow animate__fadeIn">
-      <h2>Night – Reflection</h2>
+  <section class="panel night wow animate__fadeIn" data-wow-duration="1.5s">
+    <div class="content">
+      <h2>Night — Reflection</h2>
       <p>Back in bed, the city hums outside. The day fades into calm and inspiration for tomorrow.</p>
     </div>
   </section>
+
+  <!-- WOW.js init -->
+  <script>
+    new WOW().init();
+  </script>
 </body>
 </html>
