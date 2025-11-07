@@ -13,31 +13,35 @@ body {
     color: white;
 }
 
-/* Horizontal scroll container */
-.scroll-container {
-    display: flex;
-    flex-direction: row;
-    width: 500vw;
-    /* 5 panels */
+/* Outer wrapper scrolls horizontally */
+.outer-wrapper {
+    width: 100vw;
     height: 100vh;
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
+    white-space: nowrap;
 }
 
-/* Each panel fills one screen */
-section.panel {
-    min-width: 100vw;
+/* Inner flex container */
+.horizontal-scroll {
+    display: flex;
+    width: 500vw;
+    /* 5 full panels */
     height: 100vh;
+}
+
+/* Each full-screen panel */
+section.panel {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     background-size: cover;
     background-position: center;
-    flex-shrink: 0;
-    scroll-snap-align: start;
     position: relative;
 }
 
@@ -47,10 +51,9 @@ section.panel {
     padding: 2rem 3rem;
     border-radius: 1.5rem;
     max-width: 600px;
-    backdrop-filter: blur(2px);
 }
 
-/* High-quality background images (guaranteed visible) */
+/* Background images */
 .intro {
     background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fit=crop&w=1600&q=80");
 }
@@ -71,8 +74,4 @@ section.panel {
     background-image: url("https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80");
 }
 
-/* Headings & text */
-h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    text-transform: upperc
+/* Typogra*

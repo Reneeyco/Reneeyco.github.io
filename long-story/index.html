@@ -10,48 +10,55 @@
 
 <body>
 
-    <div class="scroll-container">
+    <div class="outer-wrapper">
+        <div class="horizontal-scroll">
 
-        <section class="panel intro">
-            <div class="content">
-                <h1>The Journey of Light</h1>
-                <p>Scroll sideways to travel from dawn to dusk across the world.</p>
-            </div>
-        </section>
+            <section class="panel intro">
+                <div class="content">
+                    <h1>The Journey of Light</h1>
+                    <p>Scroll to travel from dawn to dusk across the world.</p>
+                </div>
+            </section>
 
-        <section class="panel dawn">
-            <div class="content">
-                <h2>Dawn</h2>
-                <p>The world awakens, soft light breaks the horizon, carrying warmth and hope.</p>
-            </div>
-        </section>
+            <section class="panel dawn">
+                <div class="content">
+                    <h2>Dawn</h2>
+                    <p>The first rays break the horizon. Soft light, quiet air, and new beginnings.</p>
+                </div>
+            </section>
 
-        <section class="panel noon">
-            <div class="content">
-                <h2>Noon</h2>
-                <p>Under the bright sky, life is full of motion, sunlight sharp, shadows short.</p>
-            </div>
-        </section>
+            <section class="panel noon">
+                <div class="content">
+                    <h2>Noon</h2>
+                    <p>The sun stands high and strong. The world glows with energy and life.</p>
+                </div>
+            </section>
 
-        <section class="panel sunset">
-            <div class="content">
-                <h2>Sunset</h2>
-                <p>The colors fade to amber and rose, closing another beautiful day.</p>
-            </div>
-        </section>
+            <section class="panel sunset">
+                <div class="content">
+                    <h2>Sunset</h2>
+                    <p>Shadows stretch long and the sky burns with color before fading to calm.</p>
+                </div>
+            </section>
 
-        <section class="panel night">
-            <div class="content">
-                <h2>Night</h2>
-                <p>The stars bloom quietly above, a soft reminder of endless cycles of light.</p>
-            </div>
-        </section>
+            <section class="panel night">
+                <div class="content">
+                    <h2>Night</h2>
+                    <p>Stars bloom across the dark sky. A peaceful rhythm that always returns.</p>
+                </div>
+            </section>
 
+        </div>
     </div>
 
     <script>
-        // simple horizontal scroll on vertical wheel movement
-        const scrollContainer = document.querySelector(".scroll-container");
-        window.addEventListener("wheel", (evt) => {
+        // Convert vertical scroll into horizontal scroll
+        const scrollContainer = document.querySelector(".outer-wrapper");
+        scrollContainer.addEventListener("wheel", (evt) => {
             evt.preventDefault();
-            scrollContainer.scrollLeft += evt.d
+            scrollContainer.scrollLeft += evt.deltaY;
+        });
+    </script>
+</body>
+
+</html>
