@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Journey to the Moon</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Journey to the Moon</title>
 
-  <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
 
-  <!-- Skrollr Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <!-- Skrollr Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 </head>
+
 <body>
 
-  <div id="container">
+    <!-- Sticky container for the panels -->
+    <div id="skrollr-body">
+        <div id="scroll-wrapper" data-0="transform:translateX(0%);" data-4000="transform:translateX(-400%);">
 
-    <!-- Section 1 -->
-    <section class="panel intro" data-0="left:0%;" data-1000="left:-100%;">
-      <div class="content">
-        <h1>Journey to the Moon</h1>
-        <p>From dreamers to astronauts — explore humankind’s path to the stars.</p>
-      </div>
-    </section>
+            <!-- Slide 1 -->
+            <section class="panel intro">
+                <div class="content">
+                    <h1>Journey to the Moon</h1>
+                    <p>From dreamers to astronauts — explore humankind’s path to the stars.</p>
+                </div>
+            </section>
 
-    <!-- Section 2 -->
-    <section class="panel dream" data-0="left:100%;" data-1000="left:0%;" data-2000="left:-100%;">
-      <div class="content">
-        <h2>1. The Dream Begins</h2>
-        <p>For centuries, the moon inspired myths and stories — a symbol of mystery and hope.</p>
-      </div>
-    </section>
+            <!-- Slide 2 -->
+            <section class="panel dream">
+                <div class="content">
+                    <h2>The Dream Begins</h2>
+                    <p>For centuries, the moon inspired myths and stories — a symbol of mystery and hope.</p>
+                </div>
+            </section>
 
-    <!-- Section 3 -->
-    <section class="panel rocket" data-1000="left:100%;" data-2000="left:0%;" data-3000="left:-100%;">
-      <div class="content">
-        <h2>2. Rockets Take Flight</h2>
-        <p>Engineers turned imagination into science, pushing rockets beyond the Earth’s edge.</p>
-      </div>
-    </section>
+            <!-- Slide 3 -->
+            <section class="panel rocket">
+                <div class="content">
+                    <h2>Rockets Take Flight</h2>
+                    <p>Engineers turned imagination into science, pushing rockets beyond the Earth’s edge.</p>
+                </div>
+            </section>
 
-    <!-- Section 4 -->
-    <section class="panel apollo" data-2000="left:100%;" data-3000="left:0%;" data-4000="left:-100%;">
-      <div class="content">
-        <h2>3. Apollo 11</h2>
-        <p>1969 — “One small step for man.” Humanity set foot on the moon for the first time.</p>
-      </div>
-    </section>
+            <!-- Slide 4 -->
+            <section class="panel apollo">
+                <div class="content">
+                    <h2>Apollo 11</h2>
+                    <p>1969 — “One small step for man.” Humanity set foot on the moon for the first time.</p>
+                </div>
+            </section>
 
-    <!-- Section 5 -->
-    <section class="panel future" data-3000="left:100%;" data-4000="left:0%;">
-      <div class="content">
-        <h2>4. The Future Awaits</h2>
-        <p>Now, new explorers prepare to return — to build, learn, and dream again under lunar light.</p>
-      </div>
-    </section>
+            <!-- Slide 5 -->
+            <section class="panel future">
+                <div class="content">
+                    <h2>The Future Awaits</h2>
+                    <p>Now, new explorers prepare to return — to build, learn, and dream again under lunar light.</p>
+                </div>
+            </section>
 
-  </div>
+        </div>
+    </div>
 
-  <!-- Initialize Skrollr -->
-  <script>
-    var s = skrollr.init();
-  </script>
+    <!-- Spacer for scroll distance -->
+    <div class="spacer"></div>
+
+    <script>
+        var s = skrollr.init();
+    </script>
+
 </body>
+
 </html>
