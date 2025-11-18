@@ -2,30 +2,20 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #fff;
-    color: #000;
-    overflow-x: hidden;
-    /* IMPORTANT FIX */
-}
-
-h1,
-h2 {
-    margin-bottom: 15px;
 }
 
 /* HEADER */
 header {
     background: #000;
     color: white;
-    padding: 25px 20px;
     text-align: center;
+    padding: 20px;
 }
 
 nav a {
     color: white;
-    margin: 0 12px;
-    font-weight: 500;
     text-decoration: none;
+    margin: 0 12px;
 }
 
 /* SECTIONS */
@@ -33,99 +23,85 @@ nav a {
     padding: 60px 10%;
 }
 
-.white-section {
-    background: white;
-    color: black;
-}
+/* Background Colors */
+.white-section { background: #fff; color: #000; }
+.black-section { background: #000; color: #fff; }
+.pink-section  { background: #FFC9D9; color: #000; }
 
-.black-section {
-    background: black;
-    color: white;
-}
-
-.pink-section {
-    background: #FFC9D9;
-    color: black;
-}
-
-/* ABOUT SECTION */
+/* ABOUT */
 .about-wrapper {
     display: flex;
-    flex-wrap: wrap;
     gap: 40px;
     align-items: center;
-    justify-content: center;
-    text-align: left;
 }
 
 .profile-pic {
     width: 260px;
     border-radius: 25px;
-    flex-shrink: 0;
 }
 
-.about-text {
-    max-width: 600px;
-}
-
-/* SECTION DESCRIPTION */
 .section-desc {
+    opacity: 0.8;
     max-width: 900px;
-    opacity: 0.85;
-    margin-bottom: 35px;
 }
 
-/* POSTER GRID (4 columns) */
-.poster-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    justify-items: center;
+/* SECTION HEADER WITH ICONS */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.poster-grid img {
-    width: 100%;
-    max-width: 320px;
+.section-icons img {
+    width: 32px;
+    margin-left: 12px;
+    transition: 0.3s ease;
 }
 
-/* SLIA GRID (4×2) */
-.s-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    justify-items: center;
+.section-icons img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.3);
 }
 
-.s-grid img {
-    width: 100%;
-    max-width: 350px;
+/* Dark background = white icons */
+.section-icons img {
+    filter: brightness(1000%);
 }
 
-/* ORIOBB GRID (5×4) */
+/* Pink section uses black icons */
+.pink-section .section-icons img {
+    filter: none;
+}
+
+/* GRIDS */
+.poster-grid,
+.s-grid,
 .oriobb-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-    justify-items: center;
 }
 
-.oriobb-grid img {
+.poster-grid { grid-template-columns: repeat(4, 1fr); }
+.s-grid      { grid-template-columns: repeat(4, 1fr); }
+.oriobb-grid { grid-template-columns: repeat(5, 1fr); }
+
+img {
     width: 100%;
-    max-width: 280px;
+    height: auto;
+    display: block;
 }
 
-/* VIDEOS */
+/* VIDEO ROW */
 .video-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .video-row iframe {
     width: 100%;
     height: 260px;
-    border-radius: 20px;
-    border: none;
+    border-radius: 15px;
 }
 
 /* FOOTER */
@@ -133,58 +109,16 @@ nav a {
     background: #000;
     color: white;
     text-align: center;
-    padding: 25px 0;
+    padding: 25px;
 }
 
 /* FADE ANIMATION */
 .fade {
     opacity: 0;
-    animation: fadeIn 1.4s ease forwards;
+    animation: fadeIn 1.4s forwards;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* MOBILE FIXES */
-@media (max-width: 900px) {
-    .poster-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .s-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .oriobb-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .video-row {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* WHITE SECTION SEPARATORS FOR BLACK BACKGROUND SECTIONS */
-.black-section {
-    position: relative;
-}
-
-.black-section::after {
-    content: "";
-    display: block;
-    width: 90%;
-    max-width: 1400px;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.25);
-    /* soft white line */
-    margin: 60px auto 0 auto;
+    0% { opacity: 0; transform: translateY(25px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
