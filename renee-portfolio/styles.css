@@ -1,3 +1,5 @@
+.:
+
 /* GENERAL */
 body {
     margin: 0;
@@ -9,14 +11,13 @@ body {
 h1,
 h2 {
     margin: 0 0 15px;
-    font-weight: 600;
 }
 
 /* HEADER */
 header {
     background: #000;
     color: white;
-    padding: 22px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -25,22 +26,15 @@ nav a {
     margin: 0 12px;
     font-weight: 500;
     text-decoration: none;
-    transition: 0.3s ease;
 }
 
-nav a:hover {
-    color: #FFC9D9;
-    letter-spacing: 1px;
-}
-
-/* SECTION */
+/* SECTION STYLING */
 .section {
-    padding: 65px 10%;
+    padding: 60px 10%;
+    /* remove rounded corners */
     border-radius: 0;
-    /* remove curves */
 }
 
-/* Colors */
 .white-section {
     background: white;
     color: black;
@@ -56,125 +50,63 @@ nav a:hover {
     color: black;
 }
 
-/* --- ABOUT SECTION --- */
+/* ABOUT SECTION */
 .about-wrapper {
     display: flex;
-    flex-wrap: wrap;
     gap: 40px;
     align-items: center;
 }
 
 .profile-pic {
-    width: 280px;
+    width: 260px;
+    height: auto;
     border-radius: 25px;
-    transition: transform 0.4s ease;
 }
 
-/* Hover animation for profile photo */
-.profile-pic:hover {
-    transform: scale(1.05);
-}
-
-/* Animated Title */
-.animated-title {
-    font-size: 44px;
-    position: relative;
-    animation: slideUp 1.2s ease forwards;
-    margin-bottom: 10px;
-}
-
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.section-subtitle {
-    font-size: 18px;
-    opacity: 0.85;
-    margin-bottom: 18px;
-}
-
+/* DESCRIPTION TEXT */
 .section-desc {
-    line-height: 1.6;
-    opacity: 0.85;
+    color: #ffffff;
+    opacity: 0.8;
     margin-bottom: 25px;
 }
 
-/* ABOUT CONTACT LINKS */
-.about-links a {
-    display: inline-block;
-    margin-right: 12px;
-    padding: 8px 16px;
-    border-radius: 12px;
-    background: #FFC9D9;
-    color: black;
-    text-decoration: none;
-    transition: 0.3s ease;
-    font-weight: 500;
-}
-
-.about-links a:hover {
-    background: #ff9ebf;
-    transform: translateY(-3px);
-}
-
-/* --- IMAGE HOVER ANIMATION (GLOBAL) --- */
-img {
-    transition: transform 0.32s ease, box-shadow 0.32s ease;
-}
-
-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 20px rgba(255, 201, 217, 0.35);
-}
-
-/* --- BI-SCRIPTUAL GRID (4 columns) --- */
+/* BI-SCRIPTUAL GRID (4 COLUMN) */
 .poster-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    justify-items: center;
+    gap: 20px;
 }
 
 .poster-grid img {
+    width: 100%;
     max-width: 300px;
-    border-radius: 12px;
 }
 
-/* --- SLIA (4 columns) --- */
+/* SLIA GRID → 4 COLUMNS */
 .s-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    justify-items: center;
+    gap: 20px;
 }
 
 .s-grid img {
+    width: 100%;
     max-width: 300px;
-    border-radius: 12px;
 }
 
-/* --- ORIOBB GRID (5 columns) --- */
+/* ORIOBB GRID → 5 COLUMNS*/
 .oriobb-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-    justify-items: center;
 }
 
 .oriobb-grid img {
-    max-width: 260px;
-    border-radius: 15px;
+    width: 100%;
+    max-width: 300px;
 }
 
-/* --- VIDEO ROW (Soccer & Museum) --- */
+/* VIDEO ROW */
 .video-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -184,11 +116,11 @@ img:hover {
 .video-row iframe {
     width: 100%;
     height: 260px;
-    border-radius: 18px;
+    border-radius: 20px;
     border: none;
 }
 
-/* --- FOOTER --- */
+/* FOOTER */
 .footer {
     background: #000;
     color: white;
@@ -196,7 +128,7 @@ img:hover {
     padding: 25px 0;
 }
 
-/* --- FADE IN --- */
+/* FADE-IN ANIMATION */
 .fade {
     opacity: 0;
     animation: fadeIn 1.4s ease forwards;
