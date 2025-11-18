@@ -1,134 +1,156 @@
-/* Fonts */
+/* GLOBAL */
 body {
     margin: 0;
-    background: #000;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    line-height: 1.8;
+    background: #ffffff;
+    font-family: "Inter", sans-serif;
+    color: white;
 }
 
-.heading {
-    font-family: "Space Mono", monospace;
-    font-size: 42px;
-    text-align: center;
-    margin-bottom: 10px;
+/* Handwritten font */
+.handwritten {
+    font-family: "Kalam", cursive;
+    font-size: 1.4rem;
 }
 
-.subheading {
-    font-size: 18px;
-    text-align: center;
+/* HEADER */
+header {
+    width: 100%;
+    background: black;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Header */
-.header {
-    background: #000;
-    padding: 25px;
-    text-align: center;
-    font-size: 24px;
+header .logo {
+    font-family: "Kalam", cursive;
+    font-size: 2rem;
+    color: white;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ffffff;
     font-weight: 500;
 }
 
-/* Intro Section */
-.intro-section {
-    background: #F6C3C3;
-    padding: 50px 20px;
-    color: #000;
+/* SECTIONS */
+.section {
+    padding: 90px 50px;
+    border-radius: 40px 40px 0 0;
 }
 
-.intro-container {
+.white-bg {
+    background: white;
+    color: black;
+    border-radius: 0;
+}
+
+.black-bg {
+    background: #000;
+    color: white;
+}
+
+.pink-bg {
+    background: #FFC9D9;
+    color: black;
+}
+
+.section-title {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    font-family: "Kalam", cursive;
+}
+
+.section-desc {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* ABOUT ME */
+.about-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .profile-img {
-    width: 270px;
+    width: 280px;
     border-radius: 20px;
 }
 
-.contact {
-    margin-top: 20px;
+.about-text {
+    max-width: 600px;
 }
 
-.social-links a {
-    display: inline-block;
-    margin-right: 15px;
-    padding: 10px 18px;
-    border-radius: 8px;
-    background: #000;
-    color: #F6C3C3;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Flower Row */
-.flower-row {
-    padding: 20px 0;
-    text-align: center;
-    font-size: 24px;
-}
-
-/* Three Columns */
-.three-columns {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    margin-top: 40px;
-    color: #000;
-}
-
-/* Pink Section */
-.pink-section {
-    background: #F6C3C3;
-    color: #000;
-    padding: 50px 20px;
-}
-
-.nail-gallery {
+/* POSTERS (4 IN A ROW) */
+.poster-grid {
     display: grid;
-    margin-top: 40px;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
 }
 
-.nail-gallery img {
+.poster-grid img {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 20px;
 }
 
-/* Black Section */
-.black-section {
-    padding: 60px 20px;
-    background: #000;
-}
-
-.white {
-    color: #fff;
-}
-
-/* Posters + Videos (Side-by-side layout) */
-.poster-row,
+/* VIDEO ROW (3 VIDEOS) */
 .video-row {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    margin-top: 40px;
 }
 
-.poster-row img,
 .video-row iframe {
-    width: 300px;
-    height: 500px;
-    border-radius: 10px;
-    border: none;
+    width: 100%;
+    height: 260px;
+    border-radius: 20px;
 }
 
-/* Footer */
+/* SLIA GALLERY (3 COLUMN) */
+.gallery-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.gallery-3col img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* ORIOBB (2 COLUMN GRID) */
+.oriobb-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.oriobb-grid img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* FOOTER */
 .footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px;
-    background: #000;
-    border-top: 4px solid #F6C3C3;
+    text-align: center;
+    padding: 35px;
+}
+
+/* FADE-IN ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadein 1.2s ease forwards;
+}
+
+@keyframes fadein {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
