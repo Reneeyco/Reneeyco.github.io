@@ -172,3 +172,19 @@ nav a {
         grid-template-columns: 1fr;
     }
 }
+
+/* WHITE SECTION SEPARATORS FOR BLACK BACKGROUND SECTIONS */
+.black-section {
+    position: relative;
+}
+
+.black-section::after {
+    content: "";
+    display: block;
+    width: 90%;
+    max-width: 1400px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.25);
+    /* soft white line */
+    margin: 60px auto 0 auto;
+}
