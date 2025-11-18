@@ -1,84 +1,64 @@
 /* GLOBAL */
 body {
     margin: 0;
-    background: #ffffff;
-    font-family: "Inter", sans-serif;
-    color: white;
+    font-family: 'Kalam', cursive;
+    background: white;
 }
 
-/* Handwritten font */
-.handwritten {
-    font-family: "Kalam", cursive;
-    font-size: 1.4rem;
+section {
+    padding: 70px 10%;
+    margin: 50px auto;
+    border-radius: 25px;
+}
+
+/* Fade Animation */
+.fade {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 /* HEADER */
 header {
-    width: 100%;
     background: black;
-    padding: 20px 40px;
+    color: white;
+    padding: 20px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .logo {
-    font-family: "Kalam", cursive;
-    font-size: 2rem;
-    color: white;
-}
-
 header nav a {
+    color: white;
     margin-left: 20px;
     text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
+    font-size: 18px;
 }
 
-/* SECTIONS */
-.section {
-    padding: 90px 50px;
-    border-radius: 40px 40px 0 0;
-}
-
-.white-bg {
-    background: white;
-    color: black;
-    border-radius: 0;
-}
-
-.black-bg {
-    background: #000;
+/* SECTION COLORS */
+.black {
+    background: black;
     color: white;
 }
 
-.pink-bg {
+.pink {
     background: #FFC9D9;
     color: black;
 }
 
-.section-title {
-    font-size: 2.3rem;
-    margin-bottom: 10px;
-    font-family: "Kalam", cursive;
+.about {
+    background: white;
+    color: black;
 }
 
-.section-desc {
-    margin-bottom: 40px;
-    font-size: 1.1rem;
-    opacity: 0.8;
-}
-
-/* ABOUT ME */
-.about-wrapper {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.profile-img {
-    width: 280px;
+/* ABOUT SECTION */
+.profile-pic {
+    width: 260px;
     border-radius: 20px;
 }
 
@@ -86,44 +66,45 @@ header nav a {
     max-width: 600px;
 }
 
-/* POSTERS (4 IN A ROW) */
+/* POSTER GRID (4 in a row) */
 .poster-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+    gap: 20px;
 }
 
 .poster-grid img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
-/* VIDEO ROW (3 VIDEOS) */
-.video-row {
+/* SLIA GRID */
+.s-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
+.s-grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* VIDEO ROWS */
+.video-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 .video-row iframe {
-    width: 100%;
-    height: 260px;
-    border-radius: 20px;
+    width: 32%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
 }
 
-/* SLIA GALLERY (3 COLUMN) */
-.gallery-3col {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-}
-
-.gallery-3col img {
-    width: 100%;
-    border-radius: 20px;
-}
-
-/* ORIOBB (2 COLUMN GRID) */
+/* ORIOBB GRID (2 columns) */
 .oriobb-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -132,25 +113,13 @@ header nav a {
 
 .oriobb-grid img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 /* FOOTER */
-.footer {
+footer {
+    background: black;
+    color: white;
+    padding: 20px;
     text-align: center;
-    padding: 35px;
-}
-
-/* FADE-IN ANIMATION */
-.fade {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadein 1.2s ease forwards;
-}
-
-@keyframes fadein {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
