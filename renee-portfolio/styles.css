@@ -65,31 +65,31 @@ nav a {
 .poster-grid img {
     width: 100%;
     max-width: 300px;
-    border-radius: 12px;
+    
 }
 
 /* SLIA GRID → 4 COLUMNS */
 .s-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    gap: 20px;
 }
 .s-grid img {
     width: 100%;
     max-width: 300px;
-    border-radius: 10px;
+    
 }
 
-/* ORIOBB GRID → 5 COLUMNS × 4 ROWS */
+/* ORIOBB GRID → 5 COLUMNS*/
 .oriobb-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 18px;
+    gap: 20px;
 }
 .oriobb-grid img {
     width: 100%;
-    max-width: 240px;
-    border-radius: 15px;
+    max-width: 300px;
+    
 }
 
 /* VIDEO ROW */
