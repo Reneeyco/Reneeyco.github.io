@@ -2,31 +2,55 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    background: #fff;
+    color: #000;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    margin: 0 0 15px;
+}
+
+/* LINKS FOR SECTIONS (inline professional style) */
+.section-links {
+    color: rgba(255,255,255,0.75);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.section-links a {
+    color: rgba(255,255,255,0.95);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.section-links a:hover {
+    opacity: 0.5;
 }
 
 /* HEADER */
 header {
     background: #000;
     color: white;
-    text-align: center;
     padding: 20px;
+    text-align: center;
 }
 
 nav a {
     color: white;
-    text-decoration: none;
     margin: 0 12px;
+    font-weight: 500;
+    text-decoration: none;
 }
 
-/* SECTIONS */
+/* SECTION BASE */
 .section {
     padding: 60px 10%;
 }
 
-/* Background Colors */
-.white-section { background: #fff; color: #000; }
-.black-section { background: #000; color: #fff; }
-.pink-section  { background: #FFC9D9; color: #000; }
+.white-section { background: white; color: black; }
+.black-section { background: black; color: white; }
+.pink-section  { background: #FFC9D9; color: black; }
 
 /* ABOUT */
 .about-wrapper {
@@ -42,66 +66,46 @@ nav a {
 
 .section-desc {
     opacity: 0.8;
-    max-width: 900px;
+    margin-bottom: 25px;
 }
 
-/* SECTION HEADER WITH ICONS */
-.section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.section-icons img {
-    width: 32px;
-    margin-left: 12px;
-    transition: 0.3s ease;
-}
-
-.section-icons img:hover {
-    transform: scale(1.2);
-    filter: brightness(1.3);
-}
-
-/* Dark background = white icons */
-.section-icons img {
-    filter: brightness(1000%);
-}
-
-/* Pink section uses black icons */
-.pink-section .section-icons img {
-    filter: none;
-}
-
-/* GRIDS */
+/* GRID FIXES */
 .poster-grid,
 .s-grid,
 .oriobb-grid {
+    width: 100%;
     display: grid;
     gap: 20px;
+    justify-content: center;
 }
 
+/* 4 columns */
 .poster-grid { grid-template-columns: repeat(4, 1fr); }
-.s-grid      { grid-template-columns: repeat(4, 1fr); }
+.s-grid { grid-template-columns: repeat(4, 1fr); }
+
+/* 5 columns ORIOBB */
 .oriobb-grid { grid-template-columns: repeat(5, 1fr); }
 
-img {
+.poster-grid img,
+.s-grid img,
+.oriobb-grid img {
     width: 100%;
-    height: auto;
-    display: block;
+    max-width: 260px;
+    margin: 0 auto;
 }
 
 /* VIDEO ROW */
 .video-row {
     display: grid;
-    gap: 25px;
     grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .video-row iframe {
     width: 100%;
     height: 260px;
-    border-radius: 15px;
+    border: none;
+    border-radius: 20px;
 }
 
 /* FOOTER */
@@ -109,16 +113,16 @@ img {
     background: #000;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 25px 0;
 }
 
-/* FADE ANIMATION */
+/* FADE */
 .fade {
     opacity: 0;
-    animation: fadeIn 1.4s forwards;
+    animation: fadeIn 1.3s ease forwards;
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(25px); }
-    100% { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
