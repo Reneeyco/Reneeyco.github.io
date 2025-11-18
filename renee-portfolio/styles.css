@@ -4,18 +4,20 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #fff;
     color: #000;
+    overflow-x: hidden;
+    /* IMPORTANT FIX */
 }
 
 h1,
 h2 {
-    margin: 0 0 15px;
+    margin-bottom: 15px;
 }
 
 /* HEADER */
 header {
     background: #000;
     color: white;
-    padding: 20px;
+    padding: 25px 20px;
     text-align: center;
 }
 
@@ -26,11 +28,9 @@ nav a {
     text-decoration: none;
 }
 
-/* SECTION STYLING */
+/* SECTIONS */
 .section {
     padding: 60px 10%;
-    /* remove rounded corners */
-    border-radius: 0;
 }
 
 .white-section {
@@ -51,60 +51,70 @@ nav a {
 /* ABOUT SECTION */
 .about-wrapper {
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
     align-items: center;
+    justify-content: center;
+    text-align: left;
 }
 
 .profile-pic {
     width: 260px;
-    height: auto;
     border-radius: 25px;
+    flex-shrink: 0;
 }
 
-/* DESCRIPTION TEXT */
+.about-text {
+    max-width: 600px;
+}
+
+/* SECTION DESCRIPTION */
 .section-desc {
-    color: #ffffff;
-    opacity: 0.8;
-    margin-bottom: 25px;
+    max-width: 900px;
+    opacity: 0.85;
+    margin-bottom: 35px;
 }
 
-/* BI-SCRIPTUAL GRID (4 COLUMN) */
+/* POSTER GRID (4 columns) */
 .poster-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    justify-items: center;
 }
 
 .poster-grid img {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
 }
 
-/* SLIA GRID → 4 COLUMNS */
+/* SLIA GRID (4×2) */
 .s-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    justify-items: center;
 }
 
 .s-grid img {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
 }
 
-/* ORIOBB GRID → 5 COLUMNS*/
+/* ORIOBB GRID (5×4) */
 .oriobb-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
+    justify-items: center;
 }
 
 .oriobb-grid img {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
 }
 
-/* VIDEO ROW */
+/* VIDEOS */
 .video-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -126,20 +136,39 @@ nav a {
     padding: 25px 0;
 }
 
-/* FADE-IN ANIMATION */
+/* FADE ANIMATION */
 .fade {
     opacity: 0;
     animation: fadeIn 1.4s ease forwards;
 }
 
 @keyframes fadeIn {
-    0% {
+    from {
         opacity: 0;
         transform: translateY(25px);
     }
 
-    100% {
+    to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* MOBILE FIXES */
+@media (max-width: 900px) {
+    .poster-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .s-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .oriobb-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .video-row {
+        grid-template-columns: 1fr;
     }
 }
