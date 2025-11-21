@@ -1,74 +1,113 @@
+/* GLOBAL --------------------------------------------------- */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: #ffffff;
-    color: #000;
+    color: #000000;
 }
 
-/* HEADER */
-header {
+a {
+    text-decoration: none;
+}
+
+/* HEADER --------------------------------------------------- */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    border-bottom: 1px solid #eee;
+    padding: 25px 50px;
+    border-bottom: 1px solid #f1cfe0;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 600;
+    letter-spacing: 1px;
 }
 
 nav a {
-    margin-left: 20px;
-    text-decoration: none;
+    margin-left: 24px;
     color: black;
     font-weight: 400;
 }
 
 nav a:hover {
-    opacity: 0.6;
+    color: #f1a7c4;
+    transition: 0.25s;
 }
 
-/* HERO SECTION */
+/* HERO ----------------------------------------------------- */
 .hero {
+    height: 70vh;
+    background: linear-gradient(to bottom right, #f9ddebc0, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 80px 20px;
+    padding: 40px;
 }
 
-.hero h2 {
-    font-size: 36px;
+.hero-text h2 {
+    font-size: 48px;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
-/* CATEGORY CARDS */
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.btn {
+    background: #f1a7c4;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e38bb0;
+}
+
+/* CATEGORY CARDS ------------------------------------------ */
 .categories {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 40px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
 }
 
 .card {
-    background: #f7f7f7;
-    padding: 40px 30px;
-    border-radius: 14px;
+    background: #f9ddebc7;
+    padding: 40px 35px;
+    border-radius: 16px;
     width: 160px;
     text-align: center;
     font-weight: 500;
-    transition: 0.2s;
+    font-size: 17px;
+    transition: 0.3s;
+    border: 1px solid #f1cfe0;
 }
 
 .card:hover {
-    background: #eaeaea;
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    background: #f1cfe0;
 }
 
-/* FOOTER */
+/* FOOTER --------------------------------------------------- */
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 28px;
     font-size: 14px;
-    color: #555;
-    border-top: 1px solid #eee;
+    color: #444;
+    border-top: 1px solid #f1cfe0;
+    margin-top: 40px;
 }
