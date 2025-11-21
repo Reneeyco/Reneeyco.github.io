@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    color: #000;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* CATEGORY CARDS */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: #f7f7f7;
+    padding: 40px 30px;
+    border-radius: 14px;
+    width: 160px;
+    text-align: center;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.card:hover {
+    background: #eaeaea;
+    transform: translateY(-4px);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #eee;
+}
