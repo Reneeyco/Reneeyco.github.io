@@ -26,7 +26,6 @@ a {
 .logo {
     font-size: 30px;
     font-weight: 600;
-    letter-spacing: 1px;
 }
 
 nav a {
@@ -43,12 +42,11 @@ nav a:hover {
 /* HERO ----------------------------------------------------- */
 .hero {
     height: 70vh;
-    background: linear-gradient(to bottom right, #f9ddebc0, #ffffff);
+    background: linear-gradient(to bottom right, #f9ddeb, #ffffff);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 40px;
 }
 
 .hero-text h2 {
@@ -102,7 +100,58 @@ nav a:hover {
     background: #f1cfe0;
 }
 
-/* FOOTER --------------------------------------------------- */
+/* INNER PAGE HEADER ---------------------------------------- */
+.page-header {
+    text-align: center;
+    padding: 60px 20px 20px;
+}
+
+.page-header h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #f1a7c4;
+}
+
+/* PAGE CONTENT --------------------------------------------- */
+.page-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.7;
+    padding: 20px 40px 80px;
+    color: #333;
+}
+
+/* CONTACT FORM --------------------------------------------- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #f1cfe0;
+    font-size: 16px;
+}
+
+/* FADE-IN ANIMATION ---------------------------------------- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FOOTER ---------------------------------------------------- */
 footer {
     text-align: center;
     padding: 28px;
